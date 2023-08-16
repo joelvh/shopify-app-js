@@ -3067,19 +3067,6 @@
     tslib "^2.0.3"
     uuid "^9.0.0"
 
-"@shopify/shopify-api@^7.5.1":
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/@shopify/shopify-api/-/shopify-api-7.5.1.tgz#d3c69c0b68082885bcb3ffe4a5d9cbdfb3687e46"
-  integrity sha512-zydzwkDPIyXiDcfFCW/R14m36mQkpAP4GthenrEHdx0B/yyfmfCnB6sB4KjWwtd+Y+gojx+PE/lTPCPdPCd2Kg==
-  dependencies:
-    "@shopify/network" "^3.2.1"
-    compare-versions "^5.0.3"
-    isbot "^3.6.10"
-    jose "^4.9.1"
-    node-fetch "^2.6.1"
-    tslib "^2.0.3"
-    uuid "^9.0.0"
-
 "@shopify/typescript-configs@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@shopify/typescript-configs/-/typescript-configs-5.1.0.tgz#f6e8fdd3291bf0a406578b2c6eb21f8c542d3c0a"
@@ -10002,9 +9989,9 @@ wide-align@^1.1.2, wide-align@^1.1.5:
     string-width "^1.0.2 || 2 || 3 || 4"
 
 word-wrap@^1.2.3, word-wrap@~1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
-  integrity sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.5.tgz#d2c45c6dd4fbce621a66f136cbe328afd0410b34"
+  integrity sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
   version "7.0.0"

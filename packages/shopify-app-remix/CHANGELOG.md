@@ -1,5 +1,11 @@
 # @shopify/shopify-app-remix
 
+## 1.1.1
+
+### Patch Changes
+
+- 0acfd52: Remove trailing slashes from shop domains when handling login form requests.
+
 ## 1.1.0
 
 ### Minor Changes

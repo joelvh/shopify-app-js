@@ -3579,14 +3579,14 @@
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@iterator@354",
+                "name": "__@iterator@355",
                 "value": "() => IterableIterator<JSONValue>",
                 "description": "Iterator"
               },
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@unscopables@356",
+                "name": "__@unscopables@357",
                 "value": "() => { copyWithin: boolean; entries: boolean; fill: boolean; find: boolean; findIndex: boolean; keys: boolean; values: boolean; }",
                 "description": "Returns an object whose properties have the value 'true'\r\nwhen they will be absent when used in a 'with' statement."
               },
@@ -4406,14 +4406,14 @@
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@iterator@354",
+                "name": "__@iterator@355",
                 "value": "() => IterableIterator<JSONValue>",
                 "description": "Iterator"
               },
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@unscopables@356",
+                "name": "__@unscopables@357",
                 "value": "() => { copyWithin: boolean; entries: boolean; fill: boolean; find: boolean; findIndex: boolean; keys: boolean; values: boolean; }",
                 "description": "Returns an object whose properties have the value 'true'\r\nwhen they will be absent when used in a 'with' statement."
               },
@@ -4911,14 +4911,14 @@
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@iterator@354",
+                "name": "__@iterator@355",
                 "value": "() => IterableIterator<JSONValue>",
                 "description": "Iterator"
               },
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@unscopables@356",
+                "name": "__@unscopables@357",
                 "value": "() => { copyWithin: boolean; entries: boolean; fill: boolean; find: boolean; findIndex: boolean; keys: boolean; values: boolean; }",
                 "description": "Returns an object whose properties have the value 'true'\r\nwhen they will be absent when used in a 'with' statement."
               },
@@ -6675,14 +6675,14 @@
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@iterator@354",
+                "name": "__@iterator@355",
                 "value": "() => IterableIterator<JSONValue>",
                 "description": "Iterator"
               },
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@unscopables@356",
+                "name": "__@unscopables@357",
                 "value": "() => { copyWithin: boolean; entries: boolean; fill: boolean; find: boolean; findIndex: boolean; keys: boolean; values: boolean; }",
                 "description": "Returns an object whose properties have the value 'true'\r\nwhen they will be absent when used in a 'with' statement."
               },
@@ -8370,14 +8370,14 @@
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@iterator@354",
+                "name": "__@iterator@355",
                 "value": "() => IterableIterator<JSONValue>",
                 "description": "Iterator"
               },
               {
                 "filePath": "/server/types.ts",
                 "syntaxKind": "MethodSignature",
-                "name": "__@unscopables@356",
+                "name": "__@unscopables@357",
                 "value": "() => { copyWithin: boolean; entries: boolean; fill: boolean; find: boolean; findIndex: boolean; keys: boolean; values: boolean; }",
                 "description": "Returns an object whose properties have the value 'true'\r\nwhen they will be absent when used in a 'with' statement."
               },
@@ -9198,162 +9198,6 @@
           }
         },
         "jsDocExamples": true
-      },
-      {
-        "title": "AdminApiContext",
-        "description": "Components of the `admin` response object.",
-        "type": "AdminApiContext",
-        "typeDefinitions": {
-          "AdminApiContext": {
-            "filePath": "/server/config-types.ts",
-            "name": "AdminApiContext",
-            "description": "",
-            "members": [
-              {
-                "filePath": "/server/config-types.ts",
-                "syntaxKind": "PropertySignature",
-                "name": "rest",
-                "value": "RestClientWithResources<Resources>",
-                "description": "Methods for interacting with the Shopify Admin REST API\n\nThere are methods for interacting with individual REST resources. You can also make plain `GET`, `POST`, `PUT` and `DELETE` requests should the REST resources not meet your needs.\n\n\n\n\n",
-                "examples": [
-                  {
-                    "description": "Getting the number of orders in a store using rest resources",
-                    "tabs": [
-                      {
-                        "code": "import { shopifyApp } from \"@shopify/shopify-app-remix\";\nimport { restResources } from \"@shopify/shopify-api/rest/admin/2023-07\";\n\nconst shopify = shopifyApp({\n  restResources,\n  // ...etc\n});\nexport default shopify;\nexport const authenticate = shopify.authenticate;",
-                        "title": "/app/shopify.server.ts"
-                      },
-                      {
-                        "code": "import { LoaderArgs, json } from \"@remix-run/node\";\nimport { authenticate } from \"../shopify.server\";\n\nexport const loader = async ({ request }: LoaderArgs) => {\n  const { admin, session } = await authenticate.admin(request);\n  return json(admin.rest.resources.Order.count({ session }));\n};",
-                        "title": "/app/routes/**\\/*.ts"
-                      }
-                    ]
-                  },
-                  {
-                    "description": "Making a GET request to the REST API",
-                    "tabs": [
-                      {
-                        "code": "import { shopifyApp } from \"@shopify/shopify-app-remix\";\nimport { restResources } from \"@shopify/shopify-api/rest/admin/2023-04\";\n\nconst shopify = shopifyApp({\n  restResources,\n  // ...etc\n});\nexport default shopify;\nexport const authenticate = shopify.authenticate;",
-                        "title": "/app/shopify.server.ts"
-                      },
-                      {
-                        "code": "import { LoaderArgs, json } from \"@remix-run/node\";\nimport { authenticate } from \"../shopify.server\";\n\nexport const loader = async ({ request }: LoaderArgs) => {\n  const { admin, session } = await authenticate.admin(request);\n  const response = await admin.rest.get({ path: \"/customers/count.json\" });\n  const customers = await response.json();\n  return json({ customers });\n};",
-                        "title": "/app/routes/**\\/*.ts"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "filePath": "/server/config-types.ts",
-                "syntaxKind": "PropertySignature",
-                "name": "graphql",
-                "value": "GraphqlQueryFunction",
-                "description": "Methods for interacting with the Shopify Admin GraphQL API\n\n\n\n\n\n\n\n\n\n",
-                "examples": [
-                  {
-                    "description": "Creating a new product",
-                    "tabs": [
-                      {
-                        "code": "import { ActionArgs } from \"@remix-run/node\";\nimport { authenticate } from \"../shopify.server\";\n\nexport async function action({ request }: ActionArgs) {\n  const { admin } = await authenticate.admin(request);\n\n  const response = await admin.graphql(\n    `#graphql\n    mutation populateProduct($input: ProductInput!) {\n      productCreate(input: $input) {\n        product {\n          id\n        }\n      }\n    }`,\n    { variables: { input: { title: \"Product Name\" } } }\n  );\n\n  const productData = await response.json();\n  return json({ data: productData.data });\n}",
-                        "title": "Example"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "value": "export interface AdminApiContext<\n  Resources extends ShopifyRestResources = ShopifyRestResources,\n> {\n  /**\n   * Methods for interacting with the Shopify Admin REST API\n   *\n   * There are methods for interacting with individual REST resources. You can also make plain `GET`, `POST`, `PUT` and `DELETE` requests should the REST resources not meet your needs.\n   *\n   * {@link https://shopify.dev/docs/api/admin-rest}\n   *\n   * @example\n   * <caption>Getting the number of orders in a store using rest resources</caption>\n   *\n   * ```ts\n   * // /app/shopify.server.ts\n   * import { shopifyApp } from \"@shopify/shopify-app-remix\";\n   * import { restResources } from \"@shopify/shopify-api/rest/admin/2023-07\";\n   *\n   * const shopify = shopifyApp({\n   *   restResources,\n   *   // ...etc\n   * });\n   * export default shopify;\n   * export const authenticate = shopify.authenticate;\n   * ```\n   *\n   * ```ts\n   * // /app/routes/**\\/*.ts\n   * import { LoaderArgs, json } from \"@remix-run/node\";\n   * import { authenticate } from \"../shopify.server\";\n   *\n   * export const loader = async ({ request }: LoaderArgs) => {\n   *   const { admin, session } = await authenticate.admin(request);\n   *   return json(admin.rest.resources.Order.count({ session }));\n   * };\n   * ```\n   *\n   * @example\n   * <caption>Making a GET request to the REST API</caption>\n   *\n   * ```ts\n   * // /app/shopify.server.ts\n   * import { shopifyApp } from \"@shopify/shopify-app-remix\";\n   * import { restResources } from \"@shopify/shopify-api/rest/admin/2023-04\";\n   *\n   * const shopify = shopifyApp({\n   *   restResources,\n   *   // ...etc\n   * });\n   * export default shopify;\n   * export const authenticate = shopify.authenticate;\n   * ```\n   *\n   * ```ts\n   * // /app/routes/**\\/*.ts\n   * import { LoaderArgs, json } from \"@remix-run/node\";\n   * import { authenticate } from \"../shopify.server\";\n   *\n   * export const loader = async ({ request }: LoaderArgs) => {\n   *   const { admin, session } = await authenticate.admin(request);\n   *   const response = await admin.rest.get({ path: \"/customers/count.json\" });\n   *   const customers = await response.json();\n   *   return json({ customers });\n   * };\n   * ```\n   */\n  rest: RestClientWithResources<Resources>;\n\n  /**\n   * Methods for interacting with the Shopify Admin GraphQL API\n   *\n   * {@link https://shopify.dev/docs/api/admin-graphql}\n   * {@link https://github.com/Shopify/shopify-api-js/blob/main/docs/reference/clients/Graphql.md}\n   *\n   * @example\n   * <caption>Creating a new product</caption>\n   * ```ts\n   * import { ActionArgs } from \"@remix-run/node\";\n   * import { authenticate } from \"../shopify.server\";\n   *\n   * export async function action({ request }: ActionArgs) {\n   *   const { admin } = await authenticate.admin(request);\n   *\n   *   const response = await admin.graphql(\n   *     `#graphql\n   *     mutation populateProduct($input: ProductInput!) {\n   *       productCreate(input: $input) {\n   *         product {\n   *           id\n   *         }\n   *       }\n   *     }`,\n   *     { variables: { input: { title: \"Product Name\" } } }\n   *   );\n   *\n   *   const productData = await response.json();\n   *   return json({ data: productData.data });\n   * }\n   * ```\n   */\n  graphql: GraphqlQueryFunction;\n}"
-          },
-          "RestClientWithResources": {
-            "filePath": "/server/clients/admin/rest.ts",
-            "syntaxKind": "TypeAliasDeclaration",
-            "name": "RestClientWithResources",
-            "value": "RemixRestClient & {resources: Resources}",
-            "description": ""
-          },
-          "GraphqlQueryFunction": {
-            "filePath": "/server/clients/admin/graphql.ts",
-            "name": "GraphqlQueryFunction",
-            "description": "",
-            "params": [
-              {
-                "name": "query",
-                "description": "",
-                "value": "string",
-                "filePath": "/server/clients/admin/graphql.ts"
-              },
-              {
-                "name": "options",
-                "description": "",
-                "value": "QueryOptions",
-                "isOptional": true,
-                "filePath": "/server/clients/admin/graphql.ts"
-              }
-            ],
-            "returns": {
-              "filePath": "/server/clients/admin/graphql.ts",
-              "description": "",
-              "name": "Promise<Response>",
-              "value": "Promise<Response>"
-            },
-            "value": "export type GraphqlQueryFunction = (\n  query: string,\n  options?: QueryOptions,\n) => Promise<Response>;"
-          },
-          "QueryOptions": {
-            "filePath": "/server/clients/admin/graphql.ts",
-            "name": "QueryOptions",
-            "description": "",
-            "members": [
-              {
-                "filePath": "/server/clients/admin/graphql.ts",
-                "syntaxKind": "PropertySignature",
-                "name": "variables",
-                "value": "QueryVariables",
-                "description": "",
-                "isOptional": true
-              },
-              {
-                "filePath": "/server/clients/admin/graphql.ts",
-                "syntaxKind": "PropertySignature",
-                "name": "apiVersion",
-                "value": "ApiVersion",
-                "description": "",
-                "isOptional": true
-              },
-              {
-                "filePath": "/server/clients/admin/graphql.ts",
-                "syntaxKind": "PropertySignature",
-                "name": "headers",
-                "value": "{ [key: string]: any; }",
-                "description": "",
-                "isOptional": true
-              },
-              {
-                "filePath": "/server/clients/admin/graphql.ts",
-                "syntaxKind": "PropertySignature",
-                "name": "tries",
-                "value": "number",
-                "description": "",
-                "isOptional": true
-              }
-            ],
-            "value": "interface QueryOptions {\n  variables?: QueryVariables;\n  apiVersion?: ApiVersion;\n  headers?: {[key: string]: any};\n  tries?: number;\n}"
-          },
-          "QueryVariables": {
-            "filePath": "/server/clients/admin/graphql.ts",
-            "name": "QueryVariables",
-            "description": "",
-            "members": [
-              {
-                "filePath": "/server/clients/admin/graphql.ts",
-                "name": "[key: string]",
-                "value": "any"
-              }
-            ],
-            "value": "interface QueryVariables {\n  [key: string]: any;\n}"
-          }
-        },
-        "jsDocExamples": true
       }
     ],
     "related": [
@@ -9377,65 +9221,6 @@
                   {
                     "title": "/app/routes/**\\/*.ts",
                     "code": "import { LoaderArgs, json } from \"@remix-run/node\";\nimport { unauthenticated } from \"../shopify.server\";\nimport { getWidgets } from \"~/db/widgets.server\";\n\nexport const loader = async ({ request }: LoaderArgs) =&gt; {\n  const shop = getShopFromExternalRequest(request);\n  const { session } = await unauthenticated.admin(shop);\n  return json(await getWidgets({shop: session.shop));\n};",
-                    "language": "typescript"
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "title": "rest",
-          "examples": [
-            {
-              "description": "",
-              "codeblock": {
-                "title": "Getting the number of orders in a store using rest resources",
-                "tabs": [
-                  {
-                    "title": "/app/shopify.server.ts",
-                    "code": "import { shopifyApp } from \"@shopify/shopify-app-remix\";\nimport { restResources } from \"@shopify/shopify-api/rest/admin/2023-07\";\n\nconst shopify = shopifyApp({\n  restResources,\n  // ...etc\n});\nexport default shopify;\nexport const authenticate = shopify.authenticate;",
-                    "language": "typescript"
-                  },
-                  {
-                    "title": "/app/routes/**\\/*.ts",
-                    "code": "import { LoaderArgs, json } from \"@remix-run/node\";\nimport { authenticate } from \"../shopify.server\";\n\nexport const loader = async ({ request }: LoaderArgs) =&gt; {\n  const { admin, session } = await authenticate.admin(request);\n  return json(admin.rest.resources.Order.count({ session }));\n};",
-                    "language": "typescript"
-                  }
-                ]
-              }
-            },
-            {
-              "description": "",
-              "codeblock": {
-                "title": "Making a GET request to the REST API",
-                "tabs": [
-                  {
-                    "title": "/app/shopify.server.ts",
-                    "code": "import { shopifyApp } from \"@shopify/shopify-app-remix\";\nimport { restResources } from \"@shopify/shopify-api/rest/admin/2023-04\";\n\nconst shopify = shopifyApp({\n  restResources,\n  // ...etc\n});\nexport default shopify;\nexport const authenticate = shopify.authenticate;",
-                    "language": "typescript"
-                  },
-                  {
-                    "title": "/app/routes/**\\/*.ts",
-                    "code": "import { LoaderArgs, json } from \"@remix-run/node\";\nimport { authenticate } from \"../shopify.server\";\n\nexport const loader = async ({ request }: LoaderArgs) =&gt; {\n  const { admin, session } = await authenticate.admin(request);\n  const response = await admin.rest.get({ path: \"/customers/count.json\" });\n  const customers = await response.json();\n  return json({ customers });\n};",
-                    "language": "typescript"
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "title": "graphql",
-          "examples": [
-            {
-              "description": "",
-              "codeblock": {
-                "title": "Creating a new product",
-                "tabs": [
-                  {
-                    "title": "Example",
-                    "code": "import { ActionArgs } from \"@remix-run/node\";\nimport { authenticate } from \"../shopify.server\";\n\nexport async function action({ request }: ActionArgs) {\n  const { admin } = await authenticate.admin(request);\n\n  const response = await admin.graphql(\n    `#graphql\n    mutation populateProduct($input: ProductInput!) {\n      productCreate(input: $input) {\n        product {\n          id\n        }\n      }\n    }`,\n    { variables: { input: { title: \"Product Name\" } } }\n  );\n\n  const productData = await response.json();\n  return json({ data: productData.data });\n}",
                     "language": "typescript"
                   }
                 ]
